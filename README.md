@@ -6,7 +6,7 @@ Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
 * [Question](#question)
 * [Test Result](#test-result)
 * [Codes And Screenshot](#codes-and-screenshot)
-* [Output Screenshots](#output-screenshots)
+* [Full Run](#full-run)
 
 ---
 ## Question
@@ -731,10 +731,12 @@ https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-
 </p>
 
 ---
-## Output Screenshots:
+## Full Run:
 
 <p align="center">
 
+
+https://user-images.githubusercontent.com/48597284/184292028-ed5e7480-5249-4677-9c7b-e8dea276a055.mp4
 
 
 </p>
