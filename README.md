@@ -417,22 +417,22 @@ saveAndContinue15.sendKeys(Keys.DOWN);
 saveAndContinue15.click();
 ```
 
-```md
 // ------------- Section: Who will receive your co-grantor's portion of the trust property?
-// percentage textfield
+- percentage textfield
+```md
 WebElement percentageC = driver.findElement(By.xpath("//input[@class='textbox required decimalNumber percentFormat formatInput']"));
 wait.until(ExpectedConditions.visibilityOf(percentageC));
 percentageC.sendKeys("100%");
 ```
 
+- fullNameC textfield
 ```md
-// percentage textfield
 WebElement fullNameC = driver.findElement(By.xpath("//input[@class='textbox required'][@type='text']"));
 fullNameC.sendKeys("Arwa Komo");
 ```
 
+- "save and continue" button
 ```md
-// -save and continue- button
 WebElement saveAndContinue16 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue16.click();
 ```
@@ -448,22 +448,27 @@ https://user-images.githubusercontent.com/48597284/184285440-2f14cf1f-b552-46fc-
 #### STEP 11: In this code, I just went through other forms that are not required to fill up
 
 
+
+// -------------  Section: Do you want to give any specific and charitable gifts?
+- "save and continue" button
 ```md
-// ------------- Section: Do you want to give any specific and charitable gifts?
 WebElement saveAndContinue17 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue17));
 saveAndContinue17.click();
 ```
 
-```md
 // ------------- Section: Do you want any gifts held in a subtrust?
+- "save and continue" button
+```md
 WebElement saveAndContinue18 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue18));
 saveAndContinue18.click();
 ```
 
-```md
+
 // ------------- Section: Do you want a pour-over will?
+- "save and continue" button
+```md
 WebElement saveAndContinue19 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue19));
 saveAndContinue19.click();
@@ -480,53 +485,62 @@ https://user-images.githubusercontent.com/48597284/184286700-71bec53b-f77d-4036-
 #### STEP 12:  In this code, I filled up the required information on the "Representatives" and "Additional Options" Pages
 
 
-```md
 // --------------- Representatives Page -----------------
-// -------- Section: Overview of representatives named in trust documents.
+// ------------- Section: Overview of representatives named in trust documents.
+- "save and continue" button
+```md
 WebElement saveAndContinue20 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue20));
 saveAndContinue20.click();
 ```
 
-```md
+
 // ------------- Section: Who are the successor trustees?
-// First Choice
+- First Choice
+```md
 WebElement firstChoice = driver.findElement(By.xpath("//input[@class='textbox required' and @id='first_successor_trustee']"));
 wait.until(ExpectedConditions.visibilityOf(firstChoice));
 firstChoice.sendKeys("Mawaddah");
 ```
 
-
+- "save and continue" button
 ```md
 WebElement saveAndContinue21 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue21));
 saveAndContinue21.click();
 ```
 
+
+// -------------  Section: Do you want the successor trustee to act as the executor?
+- "save and continue" button
 ```md
-// ---- Section: Do you want the successor trustee to act as the executor?
 WebElement saveAndContinue22 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue22));
 saveAndContinue22.click();
 ```
 
-```md
 // --------------- Additional Options Page -----------------
 // ------------- Section: Do you want to include optional provisions?
+- "save and continue" button
+```md
 WebElement saveAndContinue23 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue23));
 saveAndContinue23.click();
 ```
 
-```md
+
 // ------------- Section: Would you like to name the trust?
+- "save and continue" button
+```md
 WebElement saveAndContinue24 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue24));
 saveAndContinue24.click();
 ```
 
-```md
+
 // ------------- Section: Other estate planning options.
+- "save and continue" button
+```md
 WebElement saveAndContinue25 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue25));
 saveAndContinue25.click();
@@ -543,23 +557,23 @@ https://user-images.githubusercontent.com/48597284/184287324-88b7bda1-b38e-489d-
 
 #### STEP 13:  In this code, I Just went through all pages until I go to the "Complete your order" Page
 
-
+- Congratulations Page
 ```md
-// --------------- Congratulations Page ------------------------
 WebElement saveAndContinue26 = driver.findElement(By.xpath("//input[@id='ibTestContinueBottom']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue26));
 saveAndContinue26.click();
 ```
 
+- Choose your package Page
+- "save and continue" button
 ```md
-// --------------- Choose your package Page --------------------
 WebElement saveAndContinue27 = driver.findElement(By.xpath("//input[@value='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue27));
 saveAndContinue27.click();
 ```
 
+-  Secure Checkout Page
 ```md
-// ----------- Secure Checkout Page ----------------
 WebElement next = driver.findElement(By.xpath("//a[@id='button-next']"));
 wait.until(ExpectedConditions.visibilityOf(next));
 next.click();
@@ -576,29 +590,27 @@ https://user-images.githubusercontent.com/48597284/184287717-6788f20f-4874-4eaf-
 
 #### STEP 14: In this code, I fill up all the required information, and for the card number, I entered the wrong number to detect the error message.
 
-
+- First name
 ```md
-// ---------------- Complete your order Page -----------------
-// First name
 WebElement firstName = driver.findElement(By.xpath("//ul[@class='primary-contact-information']//li[1]//child::input[1]"));
 wait.until(ExpectedConditions.visibilityOf(firstName));
 firstName.sendKeys("Mawaddah");
 ```
 
+- Last name
 ```md
-// Last name
 WebElement lastName = driver.findElement(By.xpath("//li[@class='last-name primary-last-name']//following::input[@type='text' and @data-field-name='txt_ContactInfo_LName']"));
 lastName.sendKeys("Hanbali");
 ```
 
+- Email
 ```md
-// Email
 WebElement email = driver.findElement(By.xpath("//label[starts-with(normalize-space(),'Email address')]//following::input[1]"));
 email.sendKeys("mawaddah@gmail.com");
 ```
 
+- Phone Number
 ```md
-// phoneNumber
 WebElement phoneNumber = driver.findElement(By.xpath("//li[@class='phone']//div[@class='error-text']//preceding::input[1]"));
 phoneNumber.sendKeys("12012987481");
 phoneNumber.clear();
@@ -607,42 +619,41 @@ phoneNumber.sendKeys(Keys.RETURN);
 Thread.sleep(5000);
 ```
 
+- Address
 ```md
-// Address
 WebElement address = driver.findElement(By.xpath("//input[@type='text'][@tabindex='5']"));
 address.sendKeys("Makkah");
 ```
 
+- Zip Code
 ```md
-// Zip Code
 WebElement zipCode = driver.findElement(By.xpath("//input[@type='text' and @maxlength='10']"));
 zipCode.sendKeys("12343");
 ```
 
+- City
 ```md
-// City
 WebElement city = driver.findElement(By.xpath("//input[@type='text' and @maxlength='10']//following::input[1]"));
 city.sendKeys("Makkah");
 ```
 
+- State
 ```md
-// State
 WebElement state = driver.findElement(By.xpath("//option[text()='DC' or @value='29']//following::option[text()='FL']"));
 state.click();
 ```
 
+- Country
 ```md
-// Country
 WebElement country = driver.findElement(By.xpath("//option[@value='188']//preceding-sibling::option[starts-with(@value,'187')]"));
 country.click();
 Thread.sleep(5000);
 ```
 
+- Payment First Name and Last Name
 ```md
-// Payment First Name
 WebElement paymentFirstName = driver.findElement(By.xpath("//ul[@class='payment-information-form']//following::input[@tabindex='26' and @data-field-name='txt_PaymentInfo_FName']"));
 
-// Payment Last Name
 WebElement paymentLastName = driver.findElement(By.xpath("//input[@tabindex='26' and @data-field-name='txt_PaymentInfo_LName']"));
 
 // copy and paste the first and last name from above textfield to this fields
@@ -734,6 +745,7 @@ https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-
 ## Full Run:
 
 <p align="center">
+<img src="https://user-images.githubusercontent.com/48597284/184295914-4f28963e-f846-4c41-9fe9-9feb534d3e7f.png" width=80% height=80%>
 
 
 https://user-images.githubusercontent.com/48597284/184292028-ed5e7480-5249-4677-9c7b-e8dea276a055.mp4
