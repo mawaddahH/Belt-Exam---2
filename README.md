@@ -6,7 +6,7 @@ Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
 * [Question](#question)
 * [Test Result Report](#test-result-report)
 * [Codes And Screenshot](#codes-and-screenshot)
-* [Full Run](#full-run)
+* [The Complete Run](#the-complete-run)
 
 ---
 ## Question
@@ -16,7 +16,7 @@ Create an Automation Suite using Selenium (using the TestNG Framework) for confi
 ---
 ## Test Result Report
 
-In this belt exam, I used [legalzoom](https://www.legalzoom.com/) the website to test if an error message for a card number can detect it or not when the user enters a wrong number.
+In this belt exam, I used [legalzoom](https://www.legalzoom.com/) website to test if an error message for a card number can detect it or not when the user enters a wrong number.
 
 
 > About [legalzoom](https://www.legalzoom.com/) website:  tech company to make legal help, offer expert tax advice and accounting solutions that include full-service prep and filing.
@@ -26,7 +26,7 @@ So the test scenario and test case for the error message were as follows:
 - `Test Scenario` : Verify the error message function for the credit card number
 - `Test case` : Check if the error message displayed `Invalid Credit Card Number` when the user enters the wrong credit card number.
 
-I started the test from step zero `Open the browser` to the final step click on the `Agree & Place Order` button, here is the screenshot of the test case steps (workflow):
+I started the test from step zero `Open the browser` to the final step click on the `Agree & Place Order` button in living trust Application form, here is the screenshot of the test case steps (workflow):
 
 <p align="center">
 
@@ -35,7 +35,7 @@ I started the test from step zero `Open the browser` to the final step click on 
 
 </p>
 
-And as you can see above the expected result it was successful as an actual result for all steps. as a final result, the state of the test case is PASS.
+And as you can see above the expected result it was successful as an actual result for all steps. Then the state of the test case is PASS.
 
 Then I started to do the automation suit test using `Selenium` and `TestingNG` by creating a TestNG class and using `@BeforeSuite`, `@Test` , and `@AfterTest` annotation. 
 in this way, by following the step in the test case, the test also ends with a PASS result as seen below:
@@ -76,7 +76,7 @@ driver.navigate().to("https://www.legalzoom.com/");
 driver.manage().window().maximize();
 ```
 
-Then I followed these steps to create a Test
+### Then I followed these steps to create a Test:
 
 #### STEP 1: I used `Actions` class to do some actions and I used `WebDriverWait` class to avoid loading status error.
 
@@ -430,7 +430,7 @@ saveAndContinue12.sendKeys(Keys.DOWN); // scroll down to the princing plan
 saveAndContinue12.click();
 ```
 
-// Section: What should happen to the property placed in the trust when the first co-grantor passes away?
+//-------------- Section: What should happen to the property placed in the trust when the first co-grantor passes away?
 - "checkbox" button
 ```md
 WebElement checkbox3 = driver.findElement(By.name("chkctlother_heirs_cograntor_CB"));
@@ -773,16 +773,16 @@ https://user-images.githubusercontent.com/48597284/184288586-ea1a26f2-8ee8-4cb0-
 
 ---
 
-#### STEP 15:  In this code, I detect the error and compared it with the expected result.
+#### STEP 15:  In this code, I detect the error and compared it with the expected result by using `assertEquals` .
 
 ```md
 WebElement error = driver.findElement(By.xpath("//span[text()='Invalid Credit Card Number']"));
 if (error.isDisplayed()) {
-			JavascriptExecutor executor = (JavascriptExecutor) driver;
-			executor.executeScript("arguments[0].scrollIntoView(true);", error);
-			String text = error.getText();
-			Assert.assertEquals(text, "Invalid Credit Card Number");
-			System.out.println("Finshied: Complete your order Page the text error is: " + text);
+	JavascriptExecutor executor = (JavascriptExecutor) driver;
+	executor.executeScript("arguments[0].scrollIntoView(true);", error);
+	String text = error.getText();
+	Assert.assertEquals(text, "Invalid Credit Card Number");
+	System.out.println("Finshied: Complete your order Page the text error is: " + text);
 }
 ```
 
@@ -793,13 +793,13 @@ https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-
 
 </p>
 
-After finished all steps , I closed the web driver
+### After finished all steps , I closed the web driver
 ```md
 driver.quit();
 ```
 
 ---
-## Full Run:
+## The Complete Run:
 
 <p align="center">
 
