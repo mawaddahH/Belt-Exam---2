@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-12T04:52:35 AST" name="Default suite" finished-at="2022-08-12T05:01:43 AST" duration-ms="547921">
+    <groups>
+    </groups>
+    <test started-at="2022-08-12T04:52:35 AST" name="Default test" finished-at="2022-08-12T05:01:43 AST" duration-ms="547921">
+      <class name="legalzoom.TestNG">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:legalzoom.TestNG@7219ec67]" started-at="2022-08-12T04:52:29 AST" name="setUp" finished-at="2022-08-12T04:52:35 AST" duration-ms="5818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LegalZoomWebSite()[pri:0, instance:legalzoom.TestNG@7219ec67]" started-at="2022-08-12T04:52:35 AST" name="LegalZoomWebSite" finished-at="2022-08-12T05:01:42 AST" duration-ms="547416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LegalZoomWebSite -->
+        <test-method is-config="true" signature="terminateBrowser()[pri:0, instance:legalzoom.TestNG@7219ec67]" started-at="2022-08-12T05:01:42 AST" name="terminateBrowser" finished-at="2022-08-12T05:01:43 AST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateBrowser -->
+      </class> <!-- legalzoom.TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
