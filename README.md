@@ -4,16 +4,51 @@ Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
 
 ## Table of contents
 * [Question](#question)
-* [Test Result](#test-result)
+* [Test Result Report](#test-result-report)
 * [Codes And Screenshot](#codes-and-screenshot)
 * [Full Run](#full-run)
 
 ---
 ## Question
 Create an Automation Suite using Selenium (using the TestNG Framework) for confirming the error message when a wrong credit card number is entered for living trust Application form in the legal zoom.
-https://www.legalzoom.com/
 
-## Test Result
+
+---
+## Test Result Report
+
+In this belt exam, I used [legalzoom](https://www.legalzoom.com/) the website to test if an error message for a card number can detect it or not when the user enters a wrong number.
+
+
+> About [legalzoom](https://www.legalzoom.com/) website:  tech company to make legal help, offer expert tax advice and accounting solutions that include full-service prep and filing.
+
+
+So the test scenario and test case for the error message were as follows:
+- `Test Scenario` : Verify the error message function for the credit card number
+- `Test case` : Check if the error message displayed `Invalid Credit Card Number` when the user enters the wrong credit card number.
+
+I started the test from step zero `Open the browser` to the final step click on the `Agree & Place Order` button, here is the screenshot of the test case steps (workflow):
+
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/48597284/184367087-675ba11e-3a34-4374-b34a-8e3c995e1127.jpg" width=60% height=60%>
+
+
+</p>
+
+And as you can see above the expected result it was successful as an actual result for all steps. as a final result, the state of the test case is PASS.
+
+Then I started to do the automation suit test using `Selenium` and `TestingNG` by creating a TestNG class and using `@BeforeSuite`, `@Test` , and `@AfterTest` annotation. 
+in this way, by following the step in the test case, the test also ends with a PASS result as seen below:
+
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/48597284/184295914-4f28963e-f846-4c41-9fe9-9feb534d3e7f.png" width=60% height=60%>
+
+
+</p>
+
+
+---
 
 ## Codes And Screenshot
 ### First:
@@ -747,7 +782,6 @@ https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-
 ## Full Run:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/48597284/184295914-4f28963e-f846-4c41-9fe9-9feb534d3e7f.png" width=80% height=80%>
 
 
 https://user-images.githubusercontent.com/48597284/184292028-ed5e7480-5249-4677-9c7b-e8dea276a055.mp4
