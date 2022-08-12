@@ -370,6 +370,89 @@ https://user-images.githubusercontent.com/48597284/184285440-2f14cf1f-b552-46fc-
 
 </p>
 
+---
+
+- STEP 11: In this code, I just went through other forms that are not required to fill up
+
+
+```md
+// ------------- Section: Do you want to give any specific and charitable gifts?
+WebElement saveAndContinue17 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue17));
+saveAndContinue17.click();
+
+// ------------- Section: Do you want any gifts held in a subtrust?
+WebElement saveAndContinue18 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue18));
+saveAndContinue18.click();
+
+// ------------- Section: Do you want a pour-over will?
+WebElement saveAndContinue19 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue19));
+saveAndContinue19.click();
+```
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184286700-71bec53b-f77d-4036-8284-533cc77f1618.mp4
+
+</p>
+
+---
+
+- STEP 12:  In this code, I filled up the required information on the "Representatives" and "Additional Options" Pages
+
+
+```md
+// --------------- Representatives Page -----------------
+// -------- Section: Overview of representatives named in trust documents.
+WebElement saveAndContinue20 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue20));
+saveAndContinue20.click();
+
+// ------------- Section: Who are the successor trustees?
+// First Choice
+WebElement firstChoice = driver.findElement(By.xpath("//input[@class='textbox required' and @id='first_successor_trustee']"));
+wait.until(ExpectedConditions.visibilityOf(firstChoice));
+firstChoice.sendKeys("Mawaddah");
+Thread.sleep(5000);
+
+WebElement saveAndContinue21 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue21));
+saveAndContinue21.click();
+
+// ---- Section: Do you want the successor trustee to act as the executor?
+WebElement saveAndContinue22 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue22));
+saveAndContinue22.click();
+```
+
+```md
+// --------------- Additional Options Page -----------------
+// ------------- Section: Do you want to include optional provisions?
+WebElement saveAndContinue23 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue23));
+saveAndContinue23.click();
+
+// ------------- Section: Would you like to name the trust?
+WebElement saveAndContinue24 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue24));
+saveAndContinue24.click();
+
+// ------------- Section: Other estate planning options.
+WebElement saveAndContinue25 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue25));
+saveAndContinue25.click();
+```
+
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184287324-88b7bda1-b38e-489d-9251-6b67fe14816c.mp4
+
+</p>
+
+
 
 
 ---
