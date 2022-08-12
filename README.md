@@ -1,5 +1,5 @@
-# Belt-Exam---2
-Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
+# Belt-Exam-2
+Belt Exam 2 for Track 2 (AUTOMATION) - SDA - Software QA Bootcamp
 
 
 ## Table of contents
