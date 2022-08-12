@@ -181,15 +181,15 @@ middleNameC.sendKeys("Ahmad");
 WebElement lastNameC = driver.findElement(By.xpath("//input[@id='co_last'][@size='30']"));
 lastNameC.sendKeys("Komo");
 
-// "are u married" list
+// -are u married- list
 WebElement isMarriedC = driver.findElement(By.xpath("//parent::select[@id='cograntor_married_MC']//child::option[3]"));
 isMarriedC.click();
 
-// "have a children" list
+// -have a children- list
 WebElement haveChildrenC = driver.findElement(By.xpath("//option[@value='No|~|428911']"));
 haveChildrenC.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue4 = driver.findElement(By.xpath("//input[@alt='Continue' and contains(@type,'image')]"));
 saveAndContinue4.click();
 ```
@@ -217,7 +217,7 @@ WebElement cityU = driver.findElement(By.cssSelector("input[id=grantor_city]"));
 cityU.sendKeys("Makkah");
 cityU.clear();
 
-// "State" List
+// -State- List
 WebElement stateU = driver.findElement(By.xpath("//option[contains(@value,'New York')]"));
 stateU.click();
 
@@ -225,7 +225,7 @@ stateU.click();
 WebElement zipU = driver.findElement(By.xpath("//input[@id='grantor_zip' and @class='textbox ']"));
 zipU.sendKeys("123456");
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue5 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue5.click();
 
@@ -234,7 +234,7 @@ saveAndContinue5.click();
 WebElement stateC = driver.findElement(By.xpath("//option[text()='California']"));
 stateC.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue6 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue6.click();
 ```
@@ -254,7 +254,7 @@ https://user-images.githubusercontent.com/48597284/184279127-f3fb810c-1bac-4e2a-
 WebElement laws = driver.findElement(By.xpath("//option[starts-with(@value,'My ')]"));
 laws.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue7 = driver.findElement(By.xpath("//input[@alt='Continue' or @onclick='pushEpOutboundSaleInfo();']"));
 saveAndContinue7.click();
 ```
@@ -273,7 +273,7 @@ https://user-images.githubusercontent.com/48597284/184279743-c8d0599b-e492-400e-
 ```md
 // -------------- Property Page ------------------------
 // ---- Section: Overview of how property is placed in a trust.
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue8 = driver.findElement(By.cssSelector("input[alt='Continue'][type='image']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue8));
 saveAndContinue8.click();
@@ -285,17 +285,17 @@ checkbox1.click();
 WebElement checkbox2 = driver.findElement(By.xpath("//input[@name='chkctlproperty_realestate_CB']//following::input[4]"));
 checkbox2.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue9 = driver.findElement(By.cssSelector("div > input[alt='Continue']"));
 saveAndContinue9.click();
 
 // ------------- Section: Real estate details.
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue10 = driver.findElement(By.xpath("//input[@alt='Continue' and @src='/img/buttonContinueFat.gif']"));
 saveAndContinue10.click();
 
 // ------------- Section: Stock and bond details.
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue11 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue11));
 saveAndContinue11.click();
@@ -313,7 +313,7 @@ https://user-images.githubusercontent.com/48597284/184284666-1107bb26-1e96-4273-
 
 ```md
 // ------------- Section: Overview of how gifts are handled in a trust.
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue12 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue12));
 saveAndContinue12.sendKeys(Keys.DOWN); // scroll down to the princing plan
@@ -325,12 +325,14 @@ WebElement checkbox3 = driver.findElement(By.name("chkctlother_heirs_cograntor_C
 wait.until(ExpectedConditions.visibilityOf(checkbox3));
 checkbox3.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue13 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue13.sendKeys(Keys.DOWN);
 saveAndContinue13.click();
 Thread.sleep(5000);
 ```
+
+
 ```md
 // ------------- Section: Who will receive your portion of the trust property?
 // percentage textfield
@@ -342,7 +344,7 @@ percentage.sendKeys("100%");
 WebElement fullName = driver.findElement(By.xpath("//input[@class='textbox required'][@type='text']"));
 fullName.sendKeys("Mawaddah Hanbali");
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue15 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue15.sendKeys(Keys.DOWN);
 saveAndContinue15.click();
@@ -357,7 +359,7 @@ percentageC.sendKeys("100%");
 WebElement fullNameC = driver.findElement(By.xpath("//input[@class='textbox required'][@type='text']"));
 fullNameC.sendKeys("Arwa Komo");
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue16 = driver.findElement(By.cssSelector("input[alt='Continue']"));
 saveAndContinue16.click();
 ```
