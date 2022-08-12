@@ -28,14 +28,14 @@ Add them as a library in the classpath of the project
 - _click-reight on the file project >Build path > configure Bild path > Java Build Path > Libraries > classpath > add external JARs > Apply and close_.
 
 ### Third:
-- STEP 1: I used `Actions` class to do some actions and I used `WebDriverWait` class to avoid loading status error.
+#### STEP 1: I used `Actions` class to do some actions and I used `WebDriverWait` class to avoid loading status error.
 
 ```md
 ctions action = new Actions(driver);
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 ```
 
-- STEP 2: Navigate to the "Personal" Menu and click on the "living Trust" text, in this code I used `linkText` , and `partialLinkText` locator
+### STEP 2: Navigate to the "Personal" Menu and click on the "living Trust" text, in this code I used `linkText` , and `partialLinkText` locator
 
 ```md
 // personal menu
@@ -63,7 +63,7 @@ https://user-images.githubusercontent.com/48597284/184271824-d5949732-10e4-4726-
 
 ---
 
-- STEP 3: Then I click on the "Start my living trust" button, Then I scroll down to the pricing plan and select the "Basic Living Trust" plan, in this code, I used the `child` Axes , and the `contains` function.
+### STEP 3: Then I click on the "Start my living trust" button, Then I scroll down to the pricing plan and select the "Basic Living Trust" plan, in this code, I used the `child` Axes , and the `contains` function.
 
 ```md
 // -Start my living trust- Button
@@ -88,7 +88,7 @@ https://user-images.githubusercontent.com/48597284/184273113-a8d66e9d-01bd-4131-
 
 ---
 
-- STEP 4: For the "Personal Info" I started by clicking on the "save and continue" button by using the `Actions` class, Then I check on the checkbox button and then I click on the "save and continue" button.
+### STEP 4: For the "Personal Info" I started by clicking on the "save and continue" button by using the `Actions` class, Then I check on the checkbox button and then I click on the "save and continue" button.
 
 In this code, I used `ancestor-or-self` Axes, and `and` operation.
 
@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/48597284/184275541-ca525d75-ee68-403e-
 
 ---
 
-- STEP 5: In this code, I filled up the required information in the "Tell us about yourself" form, in this code I used `or` operation, `*` and `#` and `$` for contains in CSSselector, `Keys.CONTROL` for copy and paste text, `[3]` order , and `following-sibling` Axes.
+### STEP 5: In this code, I filled up the required information in the "Tell us about yourself" form, in this code I used `or` operation, `*` and `#` and `$` for contains in CSSselector, `Keys.CONTROL` for copy and paste text, `[3]` order , and `following-sibling` Axes.
 
 
 ```md
@@ -187,7 +187,7 @@ https://user-images.githubusercontent.com/48597284/184276794-28b9a740-c660-4136-
 
 ---
 
-- STEP 6: In this code, I fill up the required information in the section "Tell us about your Co-Grantor" , and I used `id` locator, XPath combination , and `parent` Axes.
+### STEP 6: In this code, I fill up the required information in the section "Tell us about your Co-Grantor" , and I used `id` locator, XPath combination , and `parent` Axes.
 
 
 ```md
@@ -235,7 +235,7 @@ https://user-images.githubusercontent.com/48597284/184278332-b47d112a-b332-4975-
 
 ---
 
-- STEP 7: In this code, I filled up the required information in sections "Where do you live?" and "Where does your co-grantor live?"
+### STEP 7: In this code, I filled up the required information in sections "Where do you live?" and "Where does your co-grantor live?"
 
 
 ```md
@@ -292,7 +292,7 @@ https://user-images.githubusercontent.com/48597284/184279127-f3fb810c-1bac-4e2a-
 
 ---
 
-- STEP 8: In this code, I filled up the required information in section "Which state's laws do you want to govern the trust?"
+### STEP 8: In this code, I filled up the required information in section "Which state's laws do you want to govern the trust?"
 
 ```md
 // laws
@@ -315,7 +315,7 @@ https://user-images.githubusercontent.com/48597284/184279743-c8d0599b-e492-400e-
 
 ---
 
-- STEP 9: In this code, I filled up the required information in Property Page for sections "Overview of how property is placed in a trust.", "What types of property will be put into trust?", "Real estate details.", and "Stock and bond details."., and I used cssSelector combination , `name` locatior , and `following` Axes
+### STEP 9: In this code, I filled up the required information in Property Page for sections "Overview of how property is placed in a trust.", "What types of property will be put into trust?", "Real estate details.", and "Stock and bond details."., and I used cssSelector combination , `name` locatior , and `following` Axes
 
 ```md
 // -------------- Property Page ------------------------
@@ -366,7 +366,7 @@ https://user-images.githubusercontent.com/48597284/184284666-1107bb26-1e96-4273-
 
 ---
 
-- STEP 10: In this code, I filled up the required information in Gifts Page for sections and I used cssSelector combination , `name` locatior , and `following` Axes
+### STEP 10: In this code, I filled up the required information in Gifts Page for sections and I used cssSelector combination , `name` locatior , and `following` Axes
 
 ```md
 // ------------- Section: Overview of how gifts are handled in a trust.
@@ -443,7 +443,7 @@ https://user-images.githubusercontent.com/48597284/184285440-2f14cf1f-b552-46fc-
 
 ---
 
-- STEP 11: In this code, I just went through other forms that are not required to fill up
+### STEP 11: In this code, I just went through other forms that are not required to fill up
 
 
 ```md
@@ -475,7 +475,7 @@ https://user-images.githubusercontent.com/48597284/184286700-71bec53b-f77d-4036-
 
 ---
 
-- STEP 12:  In this code, I filled up the required information on the "Representatives" and "Additional Options" Pages
+### STEP 12:  In this code, I filled up the required information on the "Representatives" and "Additional Options" Pages
 
 
 ```md
@@ -539,7 +539,7 @@ https://user-images.githubusercontent.com/48597284/184287324-88b7bda1-b38e-489d-
 
 ---
 
-- STEP 13:  In this code, I Just went through all pages until I go to the "Complete your order" Page
+### STEP 13:  In this code, I Just went through all pages until I go to the "Complete your order" Page
 
 
 ```md
@@ -572,7 +572,7 @@ https://user-images.githubusercontent.com/48597284/184287717-6788f20f-4874-4eaf-
 
 ---
 
-- STEP 14: In this code, I fill up all the required information, and for the card number, I entered the wrong number to detect the error message.
+### STEP 14: In this code, I fill up all the required information, and for the card number, I entered the wrong number to detect the error message.
 
 
 ```md
@@ -657,38 +657,38 @@ action.moveToElement(paymentLastName).click().build().perform();
 action.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform(); // paste
 ```
 
+- Card number
 ```md
-// Card number
 WebElement cardNumber = driver.findElement(By.xpath("//div//input[@value='0']//following-sibling::input[1]"));
 cardNumber.sendKeys("12345678942314");
 ```
 
+- Month
 ```md
-// Month
 WebElement month = driver.findElement(By.xpath("// option[contains(text(),'June')][@value='6']"));
 month.click();
 ```
 
+- Year
 ```md
-// Year
 WebElement year = driver.findElement(By.cssSelector("option[value$='028']"));
 year.click();
 ```
 
+- Billing zip code
 ```md
-// Billing zip code
 WebElement billingZipCode = driver.findElement(By.xpath("//span[text()='5 digit zip code']//preceding-sibling::input"));
 billingZipCode.sendKeys("12345");
 ```
 
+- CVV
 ```md
-// CVV
 WebElement cvv = driver.findElement(By.xpath("//li[@class='cvv']//input[1]"));
 cvv.sendKeys("777");
 ```
 
+- checkbox4
 ```md
-// checkbox4
 WebElement checkbox4 = driver.findElement(By.xpath("//p[@class='disclaimer epDisclaimerAccepted']"));
 wait.until(ExpectedConditions.visibilityOf(checkbox4));
 action.moveToElement(checkbox4).click().build().perform();
@@ -708,7 +708,7 @@ https://user-images.githubusercontent.com/48597284/184288586-ea1a26f2-8ee8-4cb0-
 
 ---
 
-- STEP 15:  In this code, I detect the error and compared it with the expected result.
+### STEP 15:  In this code, I detect the error and compared it with the expected result.
 
 ```md
 WebElement error = driver.findElement(By.xpath("//span[text()='Invalid Credit Card Number']"));
@@ -732,9 +732,7 @@ https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-
 ## Output Screenshots:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/48597284/183262086-ab51da27-a092-4a51-9628-05bd170b010d.png" width=80% height=80%>
 
 
-https://user-images.githubusercontent.com/48597284/183262155-e9b54ada-1207-4318-92f6-3cef3c95e3eb.mp4
 
 </p>
