@@ -16,7 +16,7 @@ Create an Automation Suite using Selenium (using the TestNG Framework) for confi
 ---
 ## Test Result Report
 
-In this belt exam, I used [legalzoom](https://www.legalzoom.com/) website to test if an error message for a card number can detect it or not when the user enters a wrong number.
+In this belt exam, I used [legalzoom](https://www.legalzoom.com/) website to test if the error message for a card number can display or not when the user enters a wrong number.
 
 
 > About [legalzoom](https://www.legalzoom.com/) website:  tech company to make legal help, offer expert tax advice and accounting solutions that include full-service prep and filing.
@@ -26,7 +26,7 @@ So the test scenario and test case for the error message were as follows:
 - `Test Scenario` : Verify the error message function for the credit card number
 - `Test case` : Check if the error message displayed `Invalid Credit Card Number` when the user enters the wrong credit card number.
 
-I started the test from step zero `Open the browser` to the final step click on the `Agree & Place Order` button in living trust Application form, here is the screenshot of the test case steps (workflow):
+I started the test from step zero `Open the browser` to the final step click on the `Agree & Place Order` button in the living trust Application form, here is the screenshot of the test case steps (workflow):
 
 <p align="center">
 
