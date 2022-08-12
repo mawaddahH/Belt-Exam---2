@@ -486,6 +486,7 @@ https://user-images.githubusercontent.com/48597284/184286700-71bec53b-f77d-4036-
 
 
 // --------------- Representatives Page -----------------
+
 // ------------- Section: Overview of representatives named in trust documents.
 - "save and continue" button
 ```md
@@ -520,6 +521,7 @@ saveAndContinue22.click();
 ```
 
 // --------------- Additional Options Page -----------------
+
 // ------------- Section: Do you want to include optional provisions?
 - "save and continue" button
 ```md
