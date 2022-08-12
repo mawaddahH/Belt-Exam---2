@@ -452,8 +452,192 @@ https://user-images.githubusercontent.com/48597284/184287324-88b7bda1-b38e-489d-
 
 </p>
 
+---
+
+- STEP 13:  In this code, I Just went through all pages until I go to the "Complete your order" Page
 
 
+```md
+// --------------- Congratulations Page ------------------------
+WebElement saveAndContinue26 = driver.findElement(By.xpath("//input[@id='ibTestContinueBottom']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue26));
+saveAndContinue26.click();
+
+// --------------- Choose your package Page --------------------
+WebElement saveAndContinue27 = driver.findElement(By.xpath("//input[@value='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue27));
+saveAndContinue27.click();
+
+// ----------- Secure Checkout Page ----------------
+WebElement next = driver.findElement(By.xpath("//a[@id='button-next']"));
+wait.until(ExpectedConditions.visibilityOf(next));
+next.click();
+```
+
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184287717-6788f20f-4874-4eaf-85c0-618279f54c9e.mp4
+
+</p>
+
+---
+
+- STEP 14: In this code, I fill up all the required information, and for the card number, I entered the wrong number to detect the error message.
+
+
+```md
+// ---------------- Complete your order Page -----------------
+// First name
+WebElement firstName = driver.findElement(By.xpath("//ul[@class='primary-contact-information']//li[1]//child::input[1]"));
+wait.until(ExpectedConditions.visibilityOf(firstName));
+firstName.sendKeys("Mawaddah");
+```
+
+```md
+// Last name
+WebElement lastName = driver.findElement(By.xpath("//li[@class='last-name primary-last-name']//following::input[@type='text' and @data-field-name='txt_ContactInfo_LName']"));
+lastName.sendKeys("Hanbali");
+```
+
+```md
+// Email
+WebElement email = driver.findElement(By.xpath("//label[starts-with(normalize-space(),'Email address')]//following::input[1]"));
+email.sendKeys("mawaddah@gmail.com");
+```
+
+```md
+// phoneNumber
+WebElement phoneNumber = driver.findElement(By.xpath("//li[@class='phone']//div[@class='error-text']//preceding::input[1]"));
+phoneNumber.sendKeys("12012987481");
+phoneNumber.clear();
+phoneNumber.sendKeys("12012987481");
+phoneNumber.sendKeys(Keys.RETURN);
+Thread.sleep(5000);
+```
+
+```md
+// Address
+WebElement address = driver.findElement(By.xpath("//input[@type='text'][@tabindex='5']"));
+address.sendKeys("Makkah");
+```
+
+```md
+// Zip Code
+WebElement zipCode = driver.findElement(By.xpath("//input[@type='text' and @maxlength='10']"));
+zipCode.sendKeys("12343");
+```
+
+```md
+// City
+WebElement city = driver.findElement(By.xpath("//input[@type='text' and @maxlength='10']//following::input[1]"));
+city.sendKeys("Makkah");
+```
+
+```md
+// State
+WebElement state = driver.findElement(By.xpath("//option[text()='DC' or @value='29']//following::option[text()='FL']"));
+state.click();
+```
+
+```md
+// Country
+WebElement country = driver.findElement(By.xpath("//option[@value='188']//preceding-sibling::option[starts-with(@value,'187')]"));
+country.click();
+Thread.sleep(5000);
+```
+
+```md
+// Payment First Name
+WebElement paymentFirstName = driver.findElement(By.xpath("//ul[@class='payment-information-form']//following::input[@tabindex='26' and @data-field-name='txt_PaymentInfo_FName']"));
+
+// Payment Last Name
+WebElement paymentLastName = driver.findElement(By.xpath("//input[@tabindex='26' and @data-field-name='txt_PaymentInfo_LName']"));
+
+// copy and paste the first and last name from above textfield to this fields
+action.moveToElement(firstName).click().build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform(); // select
+action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform(); // copy
+action.moveToElement(paymentFirstName).click().build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform(); // paste
+
+action.moveToElement(lastName).click().build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform(); // select
+action.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).build().perform(); // copy
+action.moveToElement(paymentLastName).click().build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform(); // paste
+```
+
+```md
+// Card number
+WebElement cardNumber = driver.findElement(By.xpath("//div//input[@value='0']//following-sibling::input[1]"));
+cardNumber.sendKeys("12345678942314");
+```
+
+```md
+// Month
+WebElement month = driver.findElement(By.xpath("// option[contains(text(),'June')][@value='6']"));
+month.click();
+```
+
+```md
+// Year
+WebElement year = driver.findElement(By.cssSelector("option[value$='028']"));
+year.click();
+```
+
+```md
+// Billing zip code
+WebElement billingZipCode = driver.findElement(By.xpath("//span[text()='5 digit zip code']//preceding-sibling::input"));
+billingZipCode.sendKeys("12345");
+```
+
+```md
+// CVV
+WebElement cvv = driver.findElement(By.xpath("//li[@class='cvv']//input[1]"));
+cvv.sendKeys("777");
+```
+
+```md
+// checkbox4
+WebElement checkbox4 = driver.findElement(By.xpath("//p[@class='disclaimer epDisclaimerAccepted']"));
+wait.until(ExpectedConditions.visibilityOf(checkbox4));
+action.moveToElement(checkbox4).click().build().perform();
+```
+
+```md
+WebElement next1 = driver.findElement(By.xpath("//a[@class='button orange flex has-right checkout-submit']"));
+next1.click();
+```
+
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184288586-ea1a26f2-8ee8-4cb0-8ec8-8441775bf8aa.mp4
+
+</p>
+
+---
+
+- STEP 15:  In this code, I detect the error and compared it with the expected result.
+
+```md
+WebElement error = driver.findElement(By.xpath("//span[text()='Invalid Credit Card Number']"));
+if (error.isDisplayed()) {
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].scrollIntoView(true);", error);
+			String text = error.getText();
+			Assert.assertEquals(text, "Invalid Credit Card Number");
+			System.out.println("Finshied: Complete your order Page the text error is: " + text);
+}
+```
+
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-b52d-8c178519cc5c.mp4
+
+</p>
 
 ---
 ## Output Screenshots:
