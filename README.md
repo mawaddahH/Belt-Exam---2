@@ -87,7 +87,7 @@ In this code, I used `ancestor-or-self` Axes, and `and` operation.
 
 
 ```md
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue1 = driver.findElement(By.xpath("//div[@class='float-left']//ancestor-or-self::input"));
 wait.until(ExpectedConditions.visibilityOf(saveAndContinue1));
 
@@ -100,7 +100,7 @@ WebElement checkBox = driver.findElement(By.xpath("//input[@id='chkctlgrantor_co
 wait.until(ExpectedConditions.visibilityOf(checkBox));
 checkBox.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue2 = driver.findElement(By.xpath("//input[@alt='Continue']//self::input"));
 saveAndContinue2.click();
 ```
@@ -142,15 +142,15 @@ action.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).build().perform()
 WebElement lastNameU = driver.findElement(By.cssSelector("#grantor_last"));
 lastNameU.sendKeys("Hanbali");
 
-// "are u married" list
+// -are u married- list
 WebElement isMarriedU = driver.findElement(By.xpath("//select[@id='grantor_married_MC']//option[3]"));
 isMarriedU.click();
 
-// "have a children" list
+// -have a children- list
 WebElement haveChildrenU = driver.findElement(By.xpath("//option[@value='Yes|~|428853']//following-sibling::option"));
 haveChildrenU.click();
 
-// "save and continue" button
+// -save and continue- button
 WebElement saveAndContinue3 = driver.findElement(By.cssSelector("input[name$='Continue2']"));
 saveAndContinue3.click();
 ```
@@ -301,12 +301,74 @@ wait.until(ExpectedConditions.visibilityOf(saveAndContinue11));
 saveAndContinue11.click();
 ```
 
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184284666-1107bb26-1e96-4273-9a68-7a9e6f8bd435.mp4
+
+</p>
+
+---
+
+- STEP 10: In this code, I filled up the required information in Gifts Page for sections and I used cssSelector combination , `name` locatior , and `following` Axes
+
+```md
+// ------------- Section: Overview of how gifts are handled in a trust.
+// "save and continue" button
+WebElement saveAndContinue12 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue12));
+saveAndContinue12.sendKeys(Keys.DOWN); // scroll down to the princing plan
+saveAndContinue12.click();
+
+// Section: What should happen to the property placed in the trust when the first co-grantor passes away?
+// checkbox
+WebElement checkbox3 = driver.findElement(By.name("chkctlother_heirs_cograntor_CB"));
+wait.until(ExpectedConditions.visibilityOf(checkbox3));
+checkbox3.click();
+
+// "save and continue" button
+WebElement saveAndContinue13 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+saveAndContinue13.sendKeys(Keys.DOWN);
+saveAndContinue13.click();
+Thread.sleep(5000);
+```
+```md
+// ------------- Section: Who will receive your portion of the trust property?
+// percentage textfield
+WebElement percentage = driver.findElement(By.xpath("//input[@class='textbox required decimalNumber percentFormat formatInput']"));
+wait.until(ExpectedConditions.visibilityOf(percentage));
+percentage.sendKeys("100%");
+
+// full Name textfield
+WebElement fullName = driver.findElement(By.xpath("//input[@class='textbox required'][@type='text']"));
+fullName.sendKeys("Mawaddah Hanbali");
+
+// "save and continue" button
+WebElement saveAndContinue15 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+saveAndContinue15.sendKeys(Keys.DOWN);
+saveAndContinue15.click();
+
+// ------------- Section: Who will receive your co-grantor's portion of the trust property?
+// percentage textfield
+WebElement percentageC = driver.findElement(By.xpath("//input[@class='textbox required decimalNumber percentFormat formatInput']"));
+wait.until(ExpectedConditions.visibilityOf(percentageC));
+percentageC.sendKeys("100%");
+
+// percentage textfield
+WebElement fullNameC = driver.findElement(By.xpath("//input[@class='textbox required'][@type='text']"));
+fullNameC.sendKeys("Arwa Komo");
+
+// "save and continue" button
+WebElement saveAndContinue16 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+saveAndContinue16.click();
+```
 
 <p align="center">
 
-https://user-images.githubusercontent.com/48597284/184280723-2c425466-4d94-4467-b77b-2507e1103ba9.mp4
+https://user-images.githubusercontent.com/48597284/184285440-2f14cf1f-b552-46fc-b1a1-8b95676e508f.mp4
 
 </p>
+
+
 
 ---
 ## Output Screenshots:
