@@ -83,7 +83,7 @@ https://user-images.githubusercontent.com/48597284/184273113-a8d66e9d-01bd-4131-
 
 - STEP 4: For the "Personal Info" I started by clicking on the "save and continue" button by using the `Actions` class, Then I check on the checkbox button and then I click on the "save and continue" button.
 
-In this code, I used `ancestor-or-self` Axes, `and` operation.
+In this code, I used `ancestor-or-self` Axes, and `and` operation.
 
 
 ```md
@@ -158,6 +158,153 @@ saveAndContinue3.click();
 <p align="center">
 
 https://user-images.githubusercontent.com/48597284/184276794-28b9a740-c660-4136-8d0d-cfd5746a8dea.mp4
+
+</p>
+
+
+---
+
+- STEP 6: In this code, I fill up the required information in the section "Tell us about your Co-Grantor" , and I used `id` locator, XPath combination , and `parent` Axes.
+
+
+```md
+// first name
+WebElement firstNameC = driver.findElement(By.id("co_first"));
+wait.until(ExpectedConditions.visibilityOf(firstNameC));
+firstNameC.sendKeys("Arwa");
+
+// middle name
+WebElement middleNameC = driver.findElement(By.xpath("//input[@id='co_middle'][@type='text']"));
+middleNameC.sendKeys("Ahmad");
+
+// last name
+WebElement lastNameC = driver.findElement(By.xpath("//input[@id='co_last'][@size='30']"));
+lastNameC.sendKeys("Komo");
+
+// "are u married" list
+WebElement isMarriedC = driver.findElement(By.xpath("//parent::select[@id='cograntor_married_MC']//child::option[3]"));
+isMarriedC.click();
+
+// "have a children" list
+WebElement haveChildrenC = driver.findElement(By.xpath("//option[@value='No|~|428911']"));
+haveChildrenC.click();
+
+// "save and continue" button
+WebElement saveAndContinue4 = driver.findElement(By.xpath("//input[@alt='Continue' and contains(@type,'image')]"));
+saveAndContinue4.click();
+```
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184278332-b47d112a-b332-4975-93d3-3777f1693da9.mp4
+
+</p>
+
+---
+
+- STEP 7: In this code, I filled up the required information in sections "Where do you live?" and "Where does your co-grantor live?"
+
+
+```md
+// ------------- Section: Where do you live?
+// Street Address
+WebElement streetAddressU = driver.findElement(By.id("grantor_address"));
+wait.until(ExpectedConditions.visibilityOf(streetAddressU));
+streetAddressU.sendKeys("saudi arabia");
+
+// City
+WebElement cityU = driver.findElement(By.cssSelector("input[id=grantor_city]"));
+cityU.sendKeys("Makkah");
+cityU.clear();
+
+// "State" List
+WebElement stateU = driver.findElement(By.xpath("//option[contains(@value,'New York')]"));
+stateU.click();
+
+// ZIP
+WebElement zipU = driver.findElement(By.xpath("//input[@id='grantor_zip' and @class='textbox ']"));
+zipU.sendKeys("123456");
+
+// "save and continue" button
+WebElement saveAndContinue5 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+saveAndContinue5.click();
+
+// ------------- Section: Where does your co-grantor live?
+// "State" List
+WebElement stateC = driver.findElement(By.xpath("//option[text()='California']"));
+stateC.click();
+
+// "save and continue" button
+WebElement saveAndContinue6 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+saveAndContinue6.click();
+```
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184279127-f3fb810c-1bac-4e2a-a5c9-66634e544254.mp4
+
+</p>
+
+---
+
+- STEP 8: In this code, I filled up the required information in section "Which state's laws do you want to govern the trust?"
+
+```md
+// laws
+WebElement laws = driver.findElement(By.xpath("//option[starts-with(@value,'My ')]"));
+laws.click();
+
+// "save and continue" button
+WebElement saveAndContinue7 = driver.findElement(By.xpath("//input[@alt='Continue' or @onclick='pushEpOutboundSaleInfo();']"));
+saveAndContinue7.click();
+```
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184279743-c8d0599b-e492-400e-8444-0cd9f0bacbbe.mp4
+
+</p>
+
+
+---
+
+- STEP 9: In this code, I filled up the required information in Property Page for sections "Overview of how property is placed in a trust.", "What types of property will be put into trust?", "Real estate details.", and "Stock and bond details."., and I used cssSelector combination , `name` locatior , and `following` Axes
+
+```md
+// -------------- Property Page ------------------------
+// ---- Section: Overview of how property is placed in a trust.
+// "save and continue" button
+WebElement saveAndContinue8 = driver.findElement(By.cssSelector("input[alt='Continue'][type='image']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue8));
+saveAndContinue8.click();
+
+// ---- Section: What types of property will be put into trust?
+WebElement checkbox1 = driver.findElement(By.name("chkctlproperty_realestate_CB"));
+checkbox1.click();
+
+WebElement checkbox2 = driver.findElement(By.xpath("//input[@name='chkctlproperty_realestate_CB']//following::input[4]"));
+checkbox2.click();
+
+// "save and continue" button
+WebElement saveAndContinue9 = driver.findElement(By.cssSelector("div > input[alt='Continue']"));
+saveAndContinue9.click();
+
+// ------------- Section: Real estate details.
+// "save and continue" button
+WebElement saveAndContinue10 = driver.findElement(By.xpath("//input[@alt='Continue' and @src='/img/buttonContinueFat.gif']"));
+saveAndContinue10.click();
+
+// ------------- Section: Stock and bond details.
+// "save and continue" button
+WebElement saveAndContinue11 = driver.findElement(By.cssSelector("input[alt='Continue']"));
+wait.until(ExpectedConditions.visibilityOf(saveAndContinue11));
+saveAndContinue11.click();
+```
+
+
+<p align="center">
+
+https://user-images.githubusercontent.com/48597284/184280723-2c425466-4d94-4467-b77b-2507e1103ba9.mp4
 
 </p>
 
