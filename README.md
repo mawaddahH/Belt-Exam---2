@@ -16,7 +16,7 @@ Create an Automation Suite using Selenium (using the TestNG Framework) for confi
 ---
 ## Test Result Report
 
-In this belt exam, I used [legalzoom](https://www.legalzoom.com/) website to test if the error message for a card number can display or not when the user enters a wrong number.
+In this belt exam, I used [legalzoom](https://www.legalzoom.com/) website to test if the error message for a card number can display or not when the user enters a wrong number for living trust Application form.
 
 
 > About [legalzoom](https://www.legalzoom.com/) website:  tech company to make legal help, offer expert tax advice and accounting solutions that include full-service prep and filing.
