@@ -51,18 +51,33 @@ in this way, by following the step in the test case, the test also ends with a P
 ---
 
 ## Codes And Screenshot
+
+Before running the code, there are some steps that need to take considered:
+
 ### First:
-Setup Latest Web Driver for Chrome  Driver.
+Setup Latest [Web Driver](https://chromedriver.chromium.org/downloads) for Chrome Driver. 
+
 Donwload the necessary jar files:
-- Selenium (Lastest).
-- TestNG (Lastest).
-- commander (Lastest).
+- [Selenium](https://www.selenium.dev/downloads/) (Lastest).
+- [TestNG](http://www.java2s.com/Code/Jar/t/Downloadtestng685jar.htm)  (Lastest).
+- [jcommander](http://www.java2s.com/Code/Jar/j/Downloadjcommanderjar.htm)  (Lastest). 
 
 ### Second:
 Add them as a library in the classpath of the project
 - _click-reight on the file project >Build path > configure Bild path > Java Build Path > Libraries > classpath > add external JARs > Apply and close_.
 
 ### Third:
+I set up the environment for testing:
+
+```md
+System.setProperty("webdriver.chrome.driver","C:\\Users\\lo0ol\\" + "Downloads\\Compressed\\chromedriver_win32_2\\chromedriver.exe");
+driver = new ChromeDriver();
+driver.navigate().to("https://www.legalzoom.com/");
+driver.manage().window().maximize();
+```
+
+Then I followed these steps to create a Test
+
 #### STEP 1: I used `Actions` class to do some actions and I used `WebDriverWait` class to avoid loading status error.
 
 ```md
@@ -777,6 +792,11 @@ if (error.isDisplayed()) {
 https://user-images.githubusercontent.com/48597284/184288691-aed372de-1910-476c-b52d-8c178519cc5c.mp4
 
 </p>
+
+After finished all steps , I closed the web driver
+```md
+driver.quit();
+```
 
 ---
 ## Full Run:
