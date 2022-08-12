@@ -4,7 +4,8 @@ Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
 
 ## Table of contents
 * [Question](#question)
-* [Answer](#answer)
+* [Test Result](#test-result)
+* [Codes And Screenshot](#codes-and-screenshot)
 * [Output Screenshots](#output-screenshots)
 
 ---
@@ -12,7 +13,9 @@ Belt Exam 2 for Track 2 - SDA - Software QA Bootcamp
 Create an Automation Suite using Selenium (using the TestNG Framework) for confirming the error message when a wrong credit card number is entered for living trust Application form in the legal zoom.
 https://www.legalzoom.com/
 
-## Answer
+## Test Result
+
+## Codes And Screenshot
 ### First:
 Setup Latest Web Driver for Chrome  Driver.
 Donwload the necessary jar files:
